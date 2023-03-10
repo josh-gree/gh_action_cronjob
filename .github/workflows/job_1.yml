@@ -19,5 +19,5 @@ jobs:
       - run: poetry install -C ./job_1 
       - run: poetry run -C ./job_1 python -m job_1.main
         env: 
-          - SOME_ENV_VAR: HELLO
-          - SOME_SECRET_ENV_VAR: ${{ secrets.SOME_SECRET_ENV_VAR }}
+          SOME_ENV_VAR: HELLO
+          SOME_SECRET_ENV_VAR: ${{ secrets.SOME_SECRET_ENV_VAR }}
