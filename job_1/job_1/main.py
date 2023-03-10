@@ -1,14 +1,10 @@
-from prefect import flow, task
+import os
 
 
-@task
-def say_hello():
-    print("Hello world")
-
-
-@flow
 def main():
-    say_hello()
+    print("Hello World!")
+    print(os.environ.get("SOME_ENV_VAR", "Not Found!"))
+    print(os.environ.get("SOME_SECRET_ENV_VAR", "Not Found!"))
 
 
 if __name__ == "__main__":
