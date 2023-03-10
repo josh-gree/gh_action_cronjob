@@ -1,3 +1,7 @@
+from prefect import flow
+
+
+@flow
 def main():
     print("Hello world")
 
